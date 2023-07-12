@@ -1,8 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 :root{
   background: #09090B;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+ul, ol,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
