@@ -12,7 +12,7 @@ const Techs = ({tech, techName}) => {
 					initial={{opacity: 0}}
 					animate={{opacity: 1}}
 					transition={{delay: 0.2}}
-					className="scroll-m-20 text-2xl font-semibold uppercase tracking-tight text-gray-100  mt-4"
+					className="scroll-m-20 text-lg md:text-2xl font-semibold uppercase tracking-tight text-gray-100  mt-4"
 				>
 					{techName}
 					<hr className="w-28" />

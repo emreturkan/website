@@ -24,7 +24,7 @@ const Bookmarks = ({bookmarks, size, text}) => {
 			variants={container}
 			initial="hidden"
 			animate="visible"
-			className="max-w-xl mx-auto px-8 py-2 mt-4 md:px-0 md:py-0 md:mt-20 mb-10"
+			className="max-w-xl mx-auto px-8 py-2 mt-8 md:px-0 md:py-0 md:mt-20 mb-10"
 		>
 			{text && (
 				<p className="text-lg md:text-2xl  leading-12 text-gray-300 tracking-wide ">

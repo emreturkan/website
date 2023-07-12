@@ -15,7 +15,7 @@ const PhotosStatistics = () => {
 			variants={items}
 			className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-12 space-y-4 md:space-y-0"
 		>
-			<Card className="w-72 md:w-60 text-left bg-transparent h-24 flex items-center ">
+			<Card className="w-full md:w-60 text-left bg-transparent h-24 flex items-center ">
 				<CardHeader>
 					<CardTitle className="text-lg font-extralight text-gray-100 opacity-80 ">
 						Unsplash Downloads
@@ -25,7 +25,7 @@ const PhotosStatistics = () => {
 					</CardDescription>
 				</CardHeader>
 			</Card>
-			<Card className="w-72 md:w-60 text-left bg-transparent h-24 flex items-center ">
+			<Card className="w-full md:w-60 text-left bg-transparent h-24 flex items-center ">
 				<CardHeader>
 					<CardTitle className="text-lg font-extralight text-gray-100 opacity-80 ">
 						Unsplash Views
