@@ -10,6 +10,7 @@ const nextConfig = {
 			'seeklogo.com',
 			'shadcn.com',
 			'raw.githubusercontent.com',
+			'ui.shadcn.com',
 		],
 	},
 }
