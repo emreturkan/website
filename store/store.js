@@ -37,14 +37,14 @@ export const usePhotoStore = create((set) => ({
 	photos: [],
 	fetch: async () => {
 		const response = await fetch(
-			'https://api.unsplash.com//users/emreturkan/statistics/?client_id=RfhiDswCIC7qKhSaKb9sl96EH31Qmx1QhYtibz3nQrY'
+			`https://api.unsplash.com//users/emreturkan/statistics/?client_id=${process.env.NEXT_PUBLIC_UNSPLASH_API}`
 		)
 		const data = await response.json()
 		set({photoStatistics: data})
 	},
 	fetchPhotos: async () => {
 		const response = await fetch(
-			'https://api.unsplash.com//users/emreturkan/photos/?client_id=RfhiDswCIC7qKhSaKb9sl96EH31Qmx1QhYtibz3nQrY&per_page=50'
+			`https://api.unsplash.com//users/emreturkan/photos/?client_id=${process.env.NEXT_PUBLIC_UNSPLASH_API}&per_page=50`
 		)
 		const data = await response.json()
 		set({photos: data})

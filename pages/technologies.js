@@ -24,6 +24,7 @@ const TechnologiesPage = () => {
 					Kullandığım Teknolojiler
 				</motion.h2>
 
+				<Techs tech={tech} techName="languages" />
 				<Techs tech={tech} techName="frontend" />
 				<Techs tech={tech} techName="ui" />
 				<Techs tech={tech} techName="service" />

@@ -21,8 +21,8 @@ const Welcome = () => {
 				</p>
 				<p className="text-lg md:text-xl leading-12 text-gray-300 tracking-wide ">
 					3D modellemeyi 🗿, fotoğraf çekmeyi 📸, oyun oynamayı 🎮 ve proje
-					geliştirmeyi ⌨ seviyorum. Son zamanlarda FPV Drone ile ilgileniyorum
-					ve uçuyorum.🚁
+					geliştirmeyi seviyorum.⌨ Son zamanlarda FPV Drone ile ilgileniyorum ve
+					drone uçuruyorum.🚁
 					<br />
 					<br />
 					Şu an için boş vakitlerimde oyun geliştirme ile ilgileniyorum ve Unity

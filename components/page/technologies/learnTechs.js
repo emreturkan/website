@@ -21,7 +21,7 @@ const LearnTechs = ({tech}) => {
 					animate="visible"
 					className=" grid grid-cols-2 md:grid-cols-3 gap-4 mt-5"
 				>
-					{tech.map(
+					{tech?.map(
 						(item) =>
 							item.learn === true && (
 								<motion.li key={item.id} variants={items}>

@@ -28,7 +28,7 @@ const Bookmarks = ({bookmarks, size, text}) => {
 		>
 			{text && (
 				<p className="text-lg md:text-2xl  leading-12 text-gray-300 tracking-wide ">
-					İnternet üzerinde gezenirken dikkatımı çeken, daha sonra tekrar bakmak
+					İnternet üzerinde gezenirken dikkatimi çeken, daha sonra tekrar bakmak
 					istediğim ve ilham aldığım şeyleri burada topluyorum. 📝
 				</p>
 			)}
