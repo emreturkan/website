@@ -12,8 +12,14 @@ const Welcome = () => {
 			className="max-w-xl mx-auto px-8 py-2 mt-0 md:px-0 md:py-0 md:mt-20"
 		>
 			<div className="  flex flex-col items-start justify-center mt-8 space-y-3">
-				<h1 className="text-2xl md:text-3xl  font-bold text-gray-200 tracking-wide mb-1 md:mb-5 ">
-					Merhaba, Ben Emre👋{' '}
+				<h1 className="text-2xl md:text-3xl  font-bold text-gray-200 tracking-wide mb-1 md:mb-5 flex items-center justify-center">
+					Merhaba, Ben Emre
+					<motion.div
+						animate={{rotateZ: [-10, 20, -10]}}
+						transition={{repeat: Infinity}}
+					>
+						👋
+					</motion.div>
 				</h1>
 				<p className="text-lg md:text-xl leading-12 text-gray-300 tracking-wide">
 					Şu anda İstanbul'da yaşıyorum ve Monachus firmasında Frontend

@@ -23,7 +23,7 @@ const Bookmarks = ({bookmarks, size, text}) => {
 	return (
 		<>
 			<Metadata
-				title="My Bookmarks Page"
+				title="Emre Turkan Bookmarks Page"
 				content="A collection of my favorite bookmarks."
 				desc="A collection of my favorite bookmarks."
 			/>
