@@ -11,7 +11,7 @@ import {container, items} from '@/utils/animation'
 import {Button} from '@/components/ui/button'
 const Socials = () => {
 	return (
-		<motion.div
+		<motion.ul
 			variants={container}
 			initial="hidden"
 			animate="visible"
@@ -22,6 +22,8 @@ const Socials = () => {
 					variant="outline"
 					size="icon"
 					className="hover:scale-105 hover:bg-blue-100 hover:border-none transition-all "
+					aria-label="email"
+					title="email"
 				>
 					<Link href="mailto:emreturkan10@gmail.com" target="_blank">
 						<EnvelopeSimple size={24} />
@@ -33,6 +35,8 @@ const Socials = () => {
 					variant="outline"
 					size="icon"
 					className="hover:scale-105 hover:bg-blue-100 hover:border-none transition-all"
+					aria-label="github"
+					title="Github"
 				>
 					<Link href="https://github.com/emreturkan" target="_blank">
 						<GithubLogo size={24} />
@@ -44,6 +48,8 @@ const Socials = () => {
 					variant="outline"
 					size="icon"
 					className="hover:scale-105 hover:bg-blue-100 hover:border-none transition-all"
+					aria-label="twitter"
+					title="twitter"
 				>
 					<Link href="https://twitter.com/_emreturkan" target="_blank">
 						<TwitterLogo size={24} />
@@ -55,13 +61,15 @@ const Socials = () => {
 					variant="outline"
 					size="icon"
 					className="hover:scale-105 hover:bg-blue-100  hover:border-none transition-all"
+					aria-label="instagram"
+					title="instagram"
 				>
 					<Link href="https://instagram.com/_emreturkan" target="_blank">
 						<InstagramLogo size={24} />
 					</Link>
 				</Button>
 			</motion.li>
-		</motion.div>
+		</motion.ul>
 	)
 }
 

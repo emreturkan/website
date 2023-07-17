@@ -17,7 +17,10 @@ const Header = () => {
 		<header className="w-full container mt-8 flex justify-between md:justify-around items-center">
 			<Link href="/" className="flex items-center  space-x-2">
 				<Avatar className="w-12 h-12 md:w-16 md:h-16">
-					<AvatarImage src="https://i1.sndcdn.com/artworks-000578134589-jnit8m-t500x500.jpg" />
+					<AvatarImage
+						src="https://i1.sndcdn.com/artworks-000578134589-jnit8m-t500x500.jpg"
+						alt="emre turkan kai avatar"
+					/>
 					<AvatarFallback>ET</AvatarFallback>
 				</Avatar>
 				<div className="flex flex-col">
@@ -32,7 +35,7 @@ const Header = () => {
 			<div className=" flex justify-end  space-x-2 md:mr-0 ">
 				<Menubar>
 					<MenubarMenu>
-						<MenubarTrigger className="cursor-pointer p-[6px] ">
+						<MenubarTrigger className="cursor-pointer p-[6px] " title="menu">
 							<List size={24} />
 						</MenubarTrigger>
 						<MenubarContent>
