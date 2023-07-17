@@ -25,7 +25,11 @@ const Socials = () => {
 					aria-label="email"
 					title="email"
 				>
-					<Link href="mailto:emreturkan10@gmail.com" target="_blank">
+					<Link
+						href="mailto:emreturkan10@gmail.com"
+						target="_blank"
+						aria-label="email"
+					>
 						<EnvelopeSimple size={24} />
 					</Link>
 				</Button>
@@ -38,7 +42,11 @@ const Socials = () => {
 					aria-label="github"
 					title="Github"
 				>
-					<Link href="https://github.com/emreturkan" target="_blank">
+					<Link
+						href="https://github.com/emreturkan"
+						target="_blank"
+						aria-label="github"
+					>
 						<GithubLogo size={24} />
 					</Link>
 				</Button>
@@ -51,7 +59,11 @@ const Socials = () => {
 					aria-label="twitter"
 					title="twitter"
 				>
-					<Link href="https://twitter.com/_emreturkan" target="_blank">
+					<Link
+						href="https://twitter.com/_emreturkan"
+						target="_blank"
+						aria-label="twitter"
+					>
 						<TwitterLogo size={24} />
 					</Link>
 				</Button>
@@ -64,7 +76,11 @@ const Socials = () => {
 					aria-label="instagram"
 					title="instagram"
 				>
-					<Link href="https://instagram.com/_emreturkan" target="_blank">
+					<Link
+						href="https://instagram.com/_emreturkan"
+						target="_blank"
+						aria-label="instagram"
+					>
 						<InstagramLogo size={24} />
 					</Link>
 				</Button>

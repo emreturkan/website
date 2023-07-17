@@ -68,7 +68,7 @@ const Bookmarks = ({bookmarks, size, text}) => {
 													{bookmark.title}
 												</CardTitle>
 											</div>
-											<CardDescription className="flex items-center space-x-2">
+											<CardDescription className="flex items-center space-x-2 text-gray-300">
 												<Calendar size={20} /> <time>{bookmarkLocalTime}</time>
 											</CardDescription>
 										</CardHeader>

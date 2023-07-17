@@ -61,7 +61,12 @@ const Header = () => {
 						</MenubarContent>
 					</MenubarMenu>
 				</Menubar>
-				<Button variant="outline" className="p-[8px] ">
+				<Button
+					variant="outline"
+					className="p-[8px] "
+					title="dark mode"
+					aria-label="dark mode"
+				>
 					<Moon size={24} />
 				</Button>
 			</div>
