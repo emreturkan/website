@@ -13,6 +13,8 @@ const nextConfig = {
 			'ui.shadcn.com',
 			'rdl.ink',
 			'www.jordienric.com',
+			'cdn.akamai.steamstatic.com',
+			'image.tmdb.org',
 		],
 	},
 }
