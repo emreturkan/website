@@ -11,6 +11,8 @@ const nextConfig = {
 			'shadcn.com',
 			'raw.githubusercontent.com',
 			'ui.shadcn.com',
+			'rdl.ink',
+			'www.jordienric.com',
 		],
 	},
 }

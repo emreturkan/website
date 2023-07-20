@@ -6,7 +6,7 @@ export default function App({Component, pageProps}) {
 	return (
 		<>
 			<Metadata
-				title="Emre Turkan Homepage"
+				title="Emre Turkan"
 				content=" Emre Turkan Kişisel Web Sitesi"
 				desc="Emre Turkan Kişisel Web Sitesi"
 			/>
