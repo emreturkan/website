@@ -12,9 +12,7 @@ const LastActivity = () => {
 	const [lastGame, setLastGame] = useState(null)
 	const [lastMovie, setLastMovie] = useState(null)
 	const getSteam = () => {
-		fetch(
-			'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=AC3C0E07DBCD5E052E8DE58912F449B4&steamid=76561198369655479&format=json'
-		)
+		fetch('/api/getSteam')
 			.then((res) => res.json())
 			.then((data) => {
 				const filteredData = data.response.games.filter(
@@ -31,9 +29,7 @@ const LastActivity = () => {
 					}
 				}
 
-				fetch(
-					`http://store.steampowered.com/api/appdetails?appids=${mostRecentGame.appid}`
-				)
+				fetch(`/api/getSteamGameDetails?appId=${mostRecentGame.appid}`)
 					.then((res) => res.json())
 					.then((game) => setLastGame(game))
 			})
@@ -76,10 +72,10 @@ const LastActivity = () => {
 							<h2 className="font-bold text-lg">{gameData?.name}</h2>
 							<div className="flex items-center  space-x-1">
 								<span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-									Aksiyon
+									{gameData?.genres[0]?.description}
 								</span>
 								<span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-									Macera
+									{gameData?.genres[1]?.description.slice(0, 8)}
 								</span>
 							</div>
 						</div>
@@ -111,7 +107,7 @@ const LastActivity = () => {
 					</div>
 					<div className="flex items-center space-x-6 p-2 ">
 						<Image
-							className="rounded-md w-32 md:w-[100px] h-20 "
+							className="rounded-md w-32 md:w-[80px] h-20 "
 							objectFit="cover"
 							src={`https://image.tmdb.org/t/p/w500${lastMovie?.poster_path}`}
 							alt={lastMovie?.original_title}
