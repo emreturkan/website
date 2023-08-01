@@ -5,6 +5,8 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
+console.log('ssss', process.env.NEXT_PUBLIC_RAINDROP_AUTH)
+
 export const useSupabaseStore = create((set) => ({
 	tech: [],
 	fetch: async () => {

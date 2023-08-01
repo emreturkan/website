@@ -19,6 +19,7 @@ const Photos = () => {
 								src={photo.urls.regular}
 								alt={photo?.description || 'Unsplash Emre Turkan Photo'}
 								width={600}
+								loading="lazy"
 								height={300}
 							/>
 						</Card>
