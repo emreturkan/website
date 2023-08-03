@@ -61,6 +61,7 @@ const Bookmarks = ({bookmarks, size, text}) => {
 													src={bookmark.cover}
 													alt={bookmark.title}
 													width={150}
+													loading="lazy"
 													height={150}
 												/>
 												<CardTitle className="text-sm md:text-xl">
