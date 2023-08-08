@@ -16,7 +16,7 @@ const Photos = () => {
 						<Card className="mb-5 p-0 bg-transparent border-none cursor-pointer">
 							<Image
 								className="rounded-md shadow-md shadow-black"
-								src={photo.urls.regular}
+								src={photo.urls.small}
 								alt={photo?.description || 'Unsplash Emre Turkan Photo'}
 								width={600}
 								loading="lazy"
