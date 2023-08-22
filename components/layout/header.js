@@ -61,14 +61,14 @@ const Header = () => {
 						</MenubarContent>
 					</MenubarMenu>
 				</Menubar>
-				<Button
+				{/* <Button
 					variant="outline"
 					className="p-[8px] "
 					title="dark mode"
 					aria-label="dark mode"
 				>
 					<Moon size={24} />
-				</Button>
+				</Button> */}
 			</div>
 		</header>
 	)

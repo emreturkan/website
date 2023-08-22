@@ -9,6 +9,7 @@ import {
 import Skeleton, {SkeletonTheme} from 'react-loading-skeleton'
 import Image from 'next/image'
 import {MovieRatingColor} from '@/utils/movieRatingColor'
+import Link from 'next/link'
 const LastActivity = () => {
 	const [lastGame, setLastGame] = useState(null)
 	const [lastMovie, setLastMovie] = useState(null)
@@ -100,10 +101,13 @@ const LastActivity = () => {
 					)}
 					{!loading && (
 						<Card className="bg-transparent  mt-5 text-white cursor-pointer border-gray-500 hover:border-gray-100 transition-all">
-							<div className="flex items-center space-x-6 p-2 ">
+							<Link
+								href="https://steamcommunity.com/id/trknemre/"
+								target="_blank"
+								className="flex items-center space-x-6 p-2 "
+							>
 								<Image
-									className="rounded-md w-32 md:w-[100px] h-20 "
-									objectFit="cover"
+									className="rounded-md w-32 md:w-[100px] h-20  "
 									src={gameData?.capsule_image}
 									alt={gameData?.name || 'Game'}
 									width={200}
@@ -121,7 +125,7 @@ const LastActivity = () => {
 										</span>
 									</div>
 								</div>
-							</div>
+							</Link>
 						</Card>
 					)}
 				</div>
@@ -188,14 +192,18 @@ const LastActivity = () => {
 									</Tooltip>
 								</TooltipProvider>
 							</div>
-							<div className="flex items-center space-x-6 p-2 ">
+							<Link
+								href="https://www.themoviedb.org/u/emreturkan/ratings"
+								target="_blank"
+								className="flex items-center space-x-6 p-2 "
+							>
 								<Image
-									className="rounded-md w-32 md:w-[80px] h-20 "
-									objectFit="cover"
+									className="rounded-md w-32 md:w-[100px] h-20 object-cover "
 									src={`https://image.tmdb.org/t/p/w500${lastMovie?.poster_path}`}
 									alt={lastMovie?.original_title || lastMovie?.title}
 									width={200}
 									height={200}
+									loading="lazy"
 								/>
 								<div className="grid grid-cols-1 h-[85px] content-between">
 									<h2 className="font-bold text-lg">
@@ -212,7 +220,7 @@ const LastActivity = () => {
 										))}
 									</div>
 								</div>
-							</div>
+							</Link>
 						</Card>
 					)}
 				</div>
