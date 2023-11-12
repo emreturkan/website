@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRaindropStore } from "@/store/store";
 import Bookmarks from "@/components/page/bookmarks";
 
 const BookmarksPage = ({ size, text }) => {
   const { bookmarks, fetchRaindrop } = useRaindropStore((state) => state);
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
     const refreshAccessToken = async () => {
@@ -19,14 +20,27 @@ const BookmarksPage = ({ size, text }) => {
         const result = await response.json();
         const { message, tokenData } = result;
 
-        fetchRaindrop(tokenData.access_token);
+        if (isMounted) {
+          fetchRaindrop(tokenData.access_token);
+        }
       } catch (error) {
         console.error("Error refreshing token:", error.message);
       }
     };
 
     refreshAccessToken();
-  }, [fetchRaindrop]);
+
+    const intervalId = setInterval(() => {
+      if (isMounted) {
+        refreshAccessToken();
+      }
+    }, 7 * 24 * 60 * 60 * 1000);
+
+    return () => {
+      clearInterval(intervalId);
+      setIsMounted(false);
+    };
+  }, [fetchRaindrop, isMounted]);
 
   if (size === false && text === false) {
     return <Bookmarks bookmarks={bookmarks} size={size} text={size} />;
