@@ -42,7 +42,7 @@ const Socials = () => {
       className="flex space-x-4 mt-4"
     >
       {SocialItems.map((socialItem) => (
-        <motion.li variants={items}>
+        <motion.li key={socialItem.title} variants={items}>
           <Button
             variant="outline"
             size="icon"

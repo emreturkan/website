@@ -18,35 +18,12 @@ export const useSupabaseStore = create((set) => ({
 
 export const useRaindropStore = create((set) => ({
   bookmarks: [],
-  accessToken: "",
-  refreshTokens: process.env.NEXT_PUBLIC_RAINDROP_REFRESH_TOKEN,
-
-  refreshToken: async () => {
-    const responses = await fetch("https://raindrop.io/oauth/access_token", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        client_id: process.env.NEXT_PUBLIC_RAINDROP_CLIENT_ID,
-        refresh_token: useRaindropStore.getState().refreshTokens,
-        client_secret: process.env.NEXT_PUBLIC_RAINDROP_CLIENT_SECRET,
-        grant_type: "refresh_token",
-      }),
-    });
-
-    const tokenData = await responses.json();
-
-    set({ accessToken: tokenData.access_token });
-  },
-
-  fetch: async () => {
-    await useRaindropStore.getState().refreshToken();
+  fetchRaindrop: async (access_token) => {
     const response = await fetch(
       `https://api.raindrop.io/rest/v1/raindrops/${process.env.NEXT_PUBLIC_RAINDROP_ID}`,
       {
         headers: {
-          Authorization: `Bearer ${useRaindropStore.getState().accessToken}`,
+          Authorization: `Bearer ${access_token}`,
         },
       }
     );
